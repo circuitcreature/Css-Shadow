@@ -1,0 +1,49 @@
+<html>
+<style>
+	body{
+		background: #fff;
+	}
+	.shadow{
+		height: 300px;
+		width: 200px;
+		background: #fff;
+		position: relative;
+		margin: 100px auto;
+		border: 2px solid transparent;
+		border-radius: 15px 15px 0 0;
+		background: linear-gradient(#fff, #fff);
+		background-clip: padding-box;
+		padding: 20px;
+		color: #777;
+	}
+	.shadow::after{
+		position: absolute;
+		top: -2px;
+		bottom: 0;
+		left: -2px;
+		right: -2px;
+		background: linear-gradient(#ccc, #ddd);
+		content: '';
+		z-index: -1;
+		border-radius: 15px 15px 0 0;
+	}
+	.shadow::before {
+		content: "";
+		height: 70%;
+		width: 150%;
+		-webkit-transform: perspective(200px) rotateX(-60deg);
+		background: linear-gradient(rgba(0,0,0,0), #999);
+		filter: blur(10px);
+		display: block;
+		position: absolute;
+		bottom: -22%;
+		left: -25%;
+		z-index: -1;
+	}
+</style>
+	<body>
+		<div class="shadow">
+			<span>Just some text</span>
+		</div>
+	</body>
+</html
